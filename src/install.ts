@@ -1,7 +1,6 @@
 import { existsSync } from 'node:fs'
 import { resolve } from 'node:path'
 import process from 'node:process'
-import { x } from 'tinyexec'
 import { detectPackageManager } from './detect'
 
 export interface InstallPackageOptions {
@@ -14,6 +13,7 @@ export interface InstallPackageOptions {
 }
 
 export async function installPackage(names: string | string[], options: InstallPackageOptions = {}) {
+  const { x } = await import('tinyexec')
   const detectedAgent = options.packageManager || await detectPackageManager(options.cwd) || 'npm'
   const [agent] = detectedAgent.split('@')
 
