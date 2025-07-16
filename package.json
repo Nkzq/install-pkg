@@ -2,7 +2,7 @@
   "name": "@nkzq/install-pkg",
   "@antfu/install-pkg": "github:nkzq/install-pkg#main",
   "type": "module",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "packageManager": "pnpm@10.10.0",
   "description": "Install package programmatically.",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
